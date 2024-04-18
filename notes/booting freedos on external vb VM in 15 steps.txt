@@ -1,0 +1,645 @@
+booting freedos on external vb VM in 15 steps
+
+
+download latest macOS Sonoma
+
+	- app store
+	
+	- InstallAssistant.pkg from https://mrmacintosh.com/macos-sonoma-full-installer-database-download-directly-from-apple/
+	  https://swcdn.apple.com/content/downloads/04/13/052-77516-A_4P7VY083DT/83qy3989rsnylxagdmim3owwjdtc33zfe4/InstallAssistant.pkg
+	  
+install macOS to external USB flash drive
+
+choose newly installed macOS disk as Startup Disk in Settings, I had called mine "Ext USB HD Macintosh" and installed latest macOS Sonoma 14.4.1 on it
+
+click "Restart"
+
+Note: if for some reason your Mac does not startup using the external USB disk as it base, you can hold down the alt Options key during restart and choose the startup disk.
+
+download latest Oracle VirtualBox binaries for macOS:
+https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-OSX.dmg
+
+download VirtualBox Oracle VM VirtualBox extension pack:
+https://download.virtualbox.org/virtualbox/7.0.14/Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack
+
+install Oracle VirtualBox
+
+install VM VirtualBox extension pack
+
+unmount internal any mounted internal SSD disks
+
+create raw physical VB vmdk virtual device
+
+
+create new FreeDOS VM
+	
+	64 GB RAM
+	
+	use sr61.img as floppy drive
+	
+	add AHCI HD using the newly created raw physical VB vmdk virtual device above
+		mark it s SSD
+	
+start FreeDOS / Spinrite VM
+
+use Spinrite to do a level 3 on the internal SSD
+
+
+
+diskutil unmountDisk disk1
+diskutil list
+diskutil unmountDisk disk1
+ls -ltr
+sudo su -
+sudo su -
+sudo /Applications/VirtualBox.app/Contents/MacOS/VirtualBox
+sudo su -
+sudo su -
+diskutil list
+history
+topgrade -y
+diskutil unmountDisk disk0
+diskutil unmountDisk disk1
+sudo /Applications/VirtualBox.app/Contents/MacOS/VirtualBox
+sudo su -
+
+
+root
+diskutil -l
+diskutil
+diskutil list
+diskutil list
+diskutil list
+diskutil
+diskutil unmountdisk /dev/disk1
+diskutil list
+diskutil unmount /dev/disk1s2
+diskutil eject /dev/disk1
+diskutil unmountdisk /dev/disk1
+kill -9 133
+diskutil unmountdisk /dev/disk1
+diskutil unmountdisk /dev/disk1
+diskutil unmountdisk /dev/disk1
+cd ~urs.rau/Projects/Spinrite\ FreeDOS\ VM/
+ls
+ls -ltr
+chown urs.rau:staff InternalSSD_RawDisk.vmdk
+cd /Applications/VirtualBox.app/Contents/MacOS/VirtualBox
+cd /Applications/VirtualBox.app/Contents/MacOS/VirtualBox ls
+cd ..
+pwd
+cd /Applications/VirtualBox.app/Contents/MacOS/
+ls
+file *
+open ./VirtualBox
+./vmstarter
+./VBoxAutostart
+./VBoxAutostart -s
+VirtualBoxVM
+VirtualBox
+open VirtualBox
+pwd
+cd ../..
+pwd
+find ./ -type f -name VirtualBox
+open /Applications/VirtualBox.app/Contents/MacOS/VirtualBox
+diskutil unmountdisk /dev/disk1
+cd ~urs.rau/Projects/Spinrite\ FreeDOS\ VM/
+ls
+ls -ltr
+ls -l /Applications/
+chown root:admin ./*
+chown -r root:admin ./*
+chown -R root:admin ./*
+LS -L
+ls -ltr
+history
+cd ~urs.rau/Projects/Spinrite\ FreeDOS\ VM/
+diskutil list
+diskutil unmountdisk disk4
+diskutil unmountdisk disk4
+cd ~urs.rau/Projects/Spinrite\ FreeDOS\ VM/
+ls
+mv -i -v InternalSSD_RawDisk.vmdk omint300-InternalSSD_RawDisk.vmdk
+cd ~urs.rau/Projects/Spinrite\ FreeDOS\ VM/
+ls
+cd Spinrite\ 6.1\ VM/
+ls
+ls Logs/
+cd ..
+ls -ltr
+open SpinRite-6.1-pr-3a.img
+history
+
+MacBook-Pro:Spinrite FreeDOS VM root# ls -ltr
+total 347152
+-rw-rw-rw-@  1 root     admin    8520624 Apr  3 03:02 sr61.img
+-rw-r--r--   1 root     admin    1529856 Apr  3 15:05 SpinRite.iso
+-rw-r--r--   1 root     admin    1474560 Apr  3 15:06 SpinRite.img
+drwxr-xr-x  15 root     admin        480 Apr  3 15:44 FreeDOS
+drwxr-xr-x   5 root     admin        160 Apr  3 17:52 FreeDOS 1.2 VM
+drwxr-xr-x   5 root     admin        160 Apr  3 17:56 FreeDOS 1.3 VM
+-rw-------@  1 root     admin   31475200 Apr  3 18:36 FreeDOS1.2.vhd
+-rw-------   1 root     staff        628 Apr  3 22:52 USBRawDisk.vmdk
+-rw-rw-rw-   1 root     admin        633 Apr  4 06:33 omint300-InternalSSD_RawDisk.vmdk
+-rw-------   1 root     admin  128843776 Apr  4 06:33 FreeDOS DATA Disk.vmdk
+-rwx------@  1 urs.rau  staff      82694 Apr  4 15:20 SR61-RT6.EXE
+-rwx------@  1 urs.rau  staff     264624 Apr  4 15:23 sr61-__AGBN2SZRJ9EFM.exe
+-rwx------@  1 urs.rau  staff     389279 Apr  4 15:23 sr61-__AGBN2SZRJ9EFM.zip
+-rwx------@  1 urs.rau  staff     261208 Apr  4 15:27 srpr-r3a_AGBN2SZRJ9EFM.exe
+-rwx------@  1 urs.rau  staff      82031 Apr  4 15:32 SR61-RT1.EXE
+-rwx------@  1 urs.rau  staff      81908 Apr  4 15:32 SR61-RT0.EXE
+-rwx------@  1 urs.rau  staff      82122 Apr  4 15:32 SR61-RT3.EXE
+-rwx------@  1 urs.rau  staff      82120 Apr  4 15:32 SR61-RT5.EXE
+-rwx------@  1 urs.rau  staff      82110 Apr  4 15:32 SR61-RT4.EXE
+-rwx------@  1 urs.rau  staff     130456 Apr  4 15:32 sr61r2-image-stub.zip
+-rwx------@  1 urs.rau  staff      82301 Apr  4 15:32 SR7-EFI.zip
+-rwx------@  1 urs.rau  staff     172952 Apr  4 15:32 UEFIboot.exe
+-rwx------@  1 urs.rau  staff      20108 Apr  4 15:32 UMBPCI.SYS
+-rwx------@  1 urs.rau  staff     379182 Apr  4 15:33 AMI-BIOS.zip
+-rwx------@  1 urs.rau  staff     130814 Apr  4 15:33 BOOT-4GB.zip
+-rwx------@  1 urs.rau  staff     232608 Apr  4 15:33 BOOTABLE-2.EXE
+-rwx------@  1 urs.rau  staff     224639 Apr  4 15:33 Capture-And-Share.zip
+-rwx------@  1 urs.rau  staff      38112 Apr  4 15:33 DOS_Screen_Thief_TSR_v2.04f.zip
+-rwx------@  1 urs.rau  staff    1529856 Apr  4 15:51 SpinRite-6.1-pr-3a.iso
+drwxr-xr-x  63 root     admin       2016 Apr  4 16:03 DLs
+-rw-------   1 root     staff        633 Apr  5 06:42 omint100-InternalSSD_RawDisk.vmdk
+-rw-------   1 root     staff        628 Apr  5 06:42 omint100-white-1GB-USB_RawDisk.vmdk
+-rwx------@  1 urs.rau  staff    1474560 Apr  5 17:17 SpinRite-6.1-pr-3a.img
+drwxr-xr-x   5 root     admin        160 Apr  5 17:19 Spinrite 6.1 VM
+-rw-r--r--@  1 urs.rau  staff      14340 Apr  5 17:20 .DS_Store
+MacBook-Pro:Spinrite FreeDOS VM root#
+
+MacBook-Pro:Spinrite FreeDOS VM root# file *.img
+SpinRite-6.1-pr-3a.img: DOS/MBR boot sector, code offset 0x3c+2, OEM-ID "FRDOS5.1", root entries 224, sectors 2880 (volumes <=32 MB), sectors/FAT 9, sectors/track 18, serial number 0, label: "SPINRITE_61", FAT (12 bit), followed by FAT
+SpinRite.img:           DOS/MBR boot sector, code offset 0x3c+2, OEM-ID "FRDOS5.1", root entries 224, sectors 2880 (volumes <=32 MB), sectors/FAT 9, sectors/track 18, serial number 0, label: "SPINRITE_61", FAT (12 bit), followed by FAT
+sr61.img:               DOS/MBR boot sector MS-MBR Windows 7 english at offset 0x163 "Invalid partition table" at offset 0x17b "Error loading operating system" at offset 0x19a "Missing operating system", disk signature 0x150b3d44; partition 1 : ID=0xc, active, start-CHS (0x0,1,1), end-CHS (0x1f4,254,63), startsector 63, 8054721 sectors
+MacBook-Pro:Spinrite FreeDOS VM root#
+
+MacBook-Pro:Spinrite FreeDOS VM root# file *.iso
+SpinRite-6.1-pr-3a.iso: ISO 9660 CD-ROM filesystem data 'SPINRITE_V6_BOOT' (bootable)
+SpinRite.iso:           ISO 9660 CD-ROM filesystem data 'SPINRITE_V6_BOOT' (bootable)
+
+sudo /usr/local/bin/VBoxManage internalcommands createrawvmdk -filename InternalSSD_RawDisk.vmdk -rawdisk /dev/disk
+
+urs.rau@MacBook-Pro Downloads % file SpinRite.*
+SpinRite.img: DOS/MBR boot sector, code offset 0x3c+2, OEM-ID "FRDOS5.1", root entries 224, sectors 2880 (volumes <=32 MB), sectors/FAT 9, sectors/track 18, serial number 0, label: "SPINRITE_61", FAT (12 bit), followed by FAT
+SpinRite.iso: ISO 9660 CD-ROM filesystem data 'SPINRITE_V6_BOOT' (bootable)
+
+brew install terraform aztfexport
+brew search hyve
+brew info xhyve
+brew info hyve
+brew info hive
+brew search virtual
+brew install vagrant
+brew install packer
+brew search azure
+brew install azure-cli
+exit
+cd /Volumes/Untitled
+vi 'This-is-Kerstin's-dell-windows-hard-disk.txt'
+vi 'This-is-Kerstin\'s-dell-windows-hard-disk.txt'\
+
+vi 'This-is-Kerstin_ss-dell-windows-hard-disk.txt'\
+
+vi ~/Desktop/This-is-Kerstin_ss-dell-windows-hard-disk.txt
+cd
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew search mounty
+brew seach ntfs
+brew search ntfs
+brew info ntfy
+brew install --cask ntfstool
+brew install mc
+brew install screen tmux
+brew install screen tmux ncdu
+brew install --cask mounty
+brew search coffee
+bew install caffein
+brew install caffeine
+brew search ntfs
+brew info ntfstool
+cd
+cd Desktop
+co -i This-is-Kerstin_ss-dell-windows-hard-disk.txt /Volumes/Untitled
+cp -i -v This-is-Kerstin_ss-dell-windows-hard-disk.txt /Volumes/Untitled
+brew install --cask virtualbox
+brew search aws
+brew install kopia awscli
+brew install --cask microsoft-azure-storage-explorer visual-studio-code
+exit
+brew search virtual
+brew install virtualenv 
+brew cleanup -s
+brew search edge
+brew --cask googlechrome microsoft-edge firefox brave
+brew install --cask googlechrome microsoft-edge firefox brave
+brew install --cask google-chrome microsoft-edge firefox brave
+brew search brave
+brew install --cask google-chrome microsoft-edge firefox brave-browse
+brew install --cask google-chrome microsoft-edge firefox brave-browser
+exit
+pwsh
+pwsh
+vi ~/.zsh_
+less /etc/passwd
+brew search hyper
+brew info hype
+brew info hyperkit
+brew install hyperkti
+brew install hyperkit
+echo $SHELL
+brew search zsh
+brew search posh
+brew install oh-my-posh
+brew install az-cli
+brew install terragrunt
+brew search virtualbox
+brew search kopia
+brew install --cask kopiaui
+brew search iterm
+brew install --cask iterm2
+brew search alternat
+brew search python
+brew install asdf
+brew search docker
+brew install --cask docker
+brew search powershell
+brew install --cask powershell
+brew search visual
+brew search adfs
+brew search brew
+brew list
+brew bundle dump --describe --global
+ls -ltrah
+less .Brewfile
+brew search linux
+brew instll x86_64-linux-gnu-binutils
+brew install x86_64-linux-gnu-binutils
+brew install util-linux
+brew search bbedit
+brew install --cask bbedit
+brew install --cask onyx
+brew search ext4
+brew fuse
+brew search fuse
+brew search ccc
+brew install mc ncdu screen tmux
+brew search carbon
+brew install --cask carbon-copy-cloner
+brew search paragon
+brew install --cask paragon-ntfs paragon-vmdk-mounter
+history 
+brew bundle dump --describe --global
+rm -i .Brewfile
+brew bundle dump --describe --global
+vagrant
+brew search resize
+brew info easy-move-plus-resize
+exit
+brew search virtualbox
+brew cask install virtualbox
+brew install --casks virtualbox
+brew instaell packer
+brew install packer
+topgrade -y
+brew
+brew search topgrade
+brew install topgrade
+topgrade -y
+brew search wine
+brew install --casks wine-stable
+topgrade -y
+topgrade -y
+exit
+brew search tailscale
+brew install --casks tailscale
+test "$?BASH_VERSION" = "0" || eval 'setenv() { export "$1=$2"; }';                setenv PATH "/Applications/Wine Stable.app/Contents/Resources/start/bin:/Applications/Wine Stable.app/Contents/Resources/wine/bin:$PATH"; winehelp --clear
+ls
+cd Projects/Spinrite\ FreeDOS\ VM
+ls
+cd Dls
+ls
+wine sr61-_LAUMQBBTJ33HB.exe
+cd Downloads
+ls -ltr
+cd 
+cd Projects/Spinrite\ FreeDOS\ VM
+dir
+ls
+sudo /usr/local/bin/VBoxManage internalcommands createrawvmdk -filename InternalSSD_RawDisk.vmdk -rawdisk /dev/disk1
+sudo /usr/local/bin/VBoxManage internalcommands createrawvmdk -filename InternalSSD_RawDisk.vmdk -rawdisk /dev/disk1
+sudo /usr/local/bin/VBoxManage internalcommands createrawvmdk -filename InternalSSD_RawDisk.vmdk -rawdisk /dev/disk1
+ls -l
+ls -l
+chmod go+rw InternalSSD_RawDisk.vmdk
+ls -ltr
+sudo su -
+brew reinstall --casks virtualbox
+ls -ltrh
+diskutil
+diskutil list
+diskutil 
+diskutil unmountDisk disk1
+diskutil list
+diskutil unmountDisk disk1
+ls -ltr
+sudo su -
+sudo su -
+sudo /Applications/VirtualBox.app/Contents/MacOS/VirtualBox
+sudo su -
+sudo su -
+diskutil list
+history
+topgrade -y
+diskutil unmountDisk disk0
+diskutil unmountDisk disk1
+sudo /Applications/VirtualBox.app/Contents/MacOS/VirtualBox
+sudo su -
+
+
+urs.rau@MacBook-Pro Downloads % sudo cp -v -i SpinRite.i* "/var/root/VirtualBox VMs/SpinRite_6.1/"
+Password:
+SpinRite.img -> /var/root/VirtualBox VMs/SpinRite_6.1/SpinRite.img
+SpinRite.iso -> /var/root/VirtualBox VMs/SpinRite_6.1/SpinRite.iso
+
+urs.rau@MacBook-Pro Downloads % diskutil list
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk0
+   1:                        EFI EFI                     314.6 MB   disk0s1
+   2:                 Apple_APFS Container disk1         1.0 TB     disk0s2
+
+/dev/disk1 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +1.0 TB     disk1
+                                 Physical Store disk0s2
+   1:                APFS Volume Macintosh HD            10.2 GB    disk1s1
+   2:                APFS Volume Macintosh HD - Data     943.3 GB   disk1s2
+   3:                APFS Volume Preboot                 2.1 GB     disk1s3
+   4:                APFS Volume Recovery                1.2 GB     disk1s4
+   5:                APFS Volume VM                      2.1 GB     disk1s5
+
+/dev/disk2 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *240.1 GB   disk2
+   1:                        EFI EFI                     209.7 MB   disk2s1
+   2:                 Apple_APFS Container disk3         239.7 GB   disk2s2
+
+/dev/disk3 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +239.7 GB   disk3
+                                 Physical Store disk2s2
+   1:                APFS Volume Ext USB HD Macintosh... 83.3 GB    disk3s1
+   2:                APFS Volume Ext USB HD Macintosh    10.2 GB    disk3s2
+   3:              APFS Snapshot com.apple.os.update-... 10.2 GB    disk3s2s1
+   4:                APFS Volume Preboot                 2.1 GB     disk3s3
+   5:                APFS Volume Recovery                1.2 GB     disk3s4
+   6:                APFS Volume VM                      1.1 MB     disk3s5
+
+/dev/disk4 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *16.0 GB    disk4
+   1:               Windows_NTFS empty_exFAT             16.0 GB    disk4s1
+
+/dev/disk5 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *16.2 GB    disk5
+   1:               Windows_NTFS MacFDBootDc             16.2 GB    disk5s1
+
+urs.rau@MacBook-Pro Downloads % diskutil list
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk0
+   1:                        EFI EFI                     314.6 MB   disk0s1
+   2:                 Apple_APFS Container disk1         1.0 TB     disk0s2
+
+/dev/disk1 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +1.0 TB     disk1
+                                 Physical Store disk0s2
+   1:                APFS Volume Macintosh HD            10.2 GB    disk1s1
+   2:                APFS Volume Macintosh HD - Data     943.3 GB   disk1s2
+   3:                APFS Volume Preboot                 2.1 GB     disk1s3
+   4:                APFS Volume Recovery                1.2 GB     disk1s4
+   5:                APFS Volume VM                      2.1 GB     disk1s5
+
+/dev/disk2 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *240.1 GB   disk2
+   1:                        EFI EFI                     209.7 MB   disk2s1
+   2:                 Apple_APFS Container disk3         239.7 GB   disk2s2
+
+/dev/disk3 (synthesized):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      APFS Container Scheme -                      +239.7 GB   disk3
+                                 Physical Store disk2s2
+   1:                APFS Volume Ext USB HD Macintosh... 83.3 GB    disk3s1
+   2:                APFS Volume Ext USB HD Macintosh    10.2 GB    disk3s2
+   3:              APFS Snapshot com.apple.os.update-... 10.2 GB    disk3s2s1
+   4:                APFS Volume Preboot                 2.1 GB     disk3s3
+   5:                APFS Volume Recovery                1.2 GB     disk3s4
+   6:                APFS Volume VM                      1.1 MB     disk3s5
+
+/dev/disk4 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *16.0 GB    disk4
+   1:               Windows_NTFS empty_exFAT             16.0 GB    disk4s1
+
+/dev/disk5 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *16.2 GB    disk5
+   1:               Windows_NTFS MacFDBootDc             16.2 GB    disk5s1
+
+
+MacBook-Pro:~ root# cd VirtualBox\ VMs/SpinRite_6.1/
+MacBook-Pro:SpinRite_6.1 root# ls
+SpinRite.img	SpinRite.iso
+MacBook-Pro:SpinRite_6.1 root#
+MacBook-Pro:SpinRite_6.1 root#
+MacBook-Pro:SpinRite_6.1 root#
+MacBook-Pro:SpinRite_6.1 root#
+MacBook-Pro:SpinRite_6.1 root#
+MacBook-Pro:SpinRite_6.1 root#
+MacBook-Pro:SpinRite_6.1 root#
+MacBook-Pro:SpinRite_6.1 root#
+MacBook-Pro:SpinRite_6.1 root# ls -l
+total 5872
+-rw-r--r--  1 root  wheel  1474560 Apr 16 11:33 SpinRite.img
+-rw-r--r--  1 root  wheel  1529856 Apr 16 11:33 SpinRite.iso
+MacBook-Pro:SpinRite_6.1 root# pwd
+/var/root/VirtualBox VMs/SpinRite_6.1
+MacBook-Pro:SpinRite_6.1 root# cd ~root/VirtualBox\ VMs/SpinRite_6.1/
+
+MacBook-Pro:SpinRite_6.1 root# sudo /usr/local/bin/VBoxManage internalcommands createrawvmdk -filename InternalSSD_RawDisk.vmdk -rawdisk /dev/disk1
+
+The 'createrawvdk' subcommand is deprecated.  The equivalent functionality is
+available using the 'VBoxManage createmedium' command and should be used
+instead.  See 'VBoxManage help createmedium' for details.
+
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+Medium created. UUID: bc267fde-9e55-4dc3-8789-6dd4bc64889a
+MacBook-Pro:SpinRite_6.1 root#
+
+ 176  cd Downloads
+  177  ls -ltr sr61*
+  178  open sr61.zip
+  
+
+MacBook-Pro:SpinRite_6.1 root# cp -i -v ~urs.rau/Downloads/sr61.img .
+/Users/urs.rau/Downloads/sr61.img -> ./sr61.img
+
+VBoxManage modifyvm SpinRite_6.1 --bioslogodisplaytime 10000
+
+elevated powershell
+
+diskpart
+
+Microsoft DiskPart version 10.0.22621.1
+
+Copyright (C) Microsoft Corporation.
+On computer: DESKTOP-FEQK2N9
+
+DISKPART> list drive
+
+Microsoft DiskPart version 10.0.22621.1
+
+DISK        - Display a list of disks. For example, LIST DISK.
+PARTITION   - Display a list of partitions on the selected disk.
+              For example, LIST PARTITION.
+VOLUME      - Display a list of volumes. For example, LIST VOLUME.
+VDISK       - Displays a list of virtual disks.
+
+DISKPART> list disk
+
+  Disk ###  Status         Size     Free     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  Disk 0    Online          238 GB  2048 KB        *
+  Disk 1    Online           57 GB      0 B
+  Disk 2    Online           15 GB      0 B
+  Disk 3    Online          954 MB      0 B
+
+DISKPART> exit
+
+Leaving DiskPart...
+
+cd C:\Users\adminwin\VirtualBox VMs\SpinRite_6.1
+VBoxManage internalcommands createrawvmdk -filename "FILENAME" -rawdisk "\\.\PhysicalDrive#"
+'C:\Program Files\Oracle\VirtualBox\VBoxManage.exe' internalcommands createrawvmdk -filename "My-Internal-HD.vmdk" -rawdisk "\\.\PhysicalDrive0"
+
+C:\Users\adminwin\VirtualBox VMs\SpinRite_6.1>"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands createrawvmdk -filename "My-Internal-HD.vmdk" -rawdisk "\\.\PhysicalDrive0"
+
+The 'createrawvdk' subcommand is deprecated.  The equivalent functionality is
+available using the 'VBoxManage createmedium' command and should be used
+instead.  See 'VBoxManage help createmedium' for details.
+
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+Medium created. UUID: 867a1655-7e33-4320-bbc2-2034fedcbc33
+
+https://www.ratatouille90.com/2013/11/using-a-raw-disk-as-a-virtualbox-drive/
+Start up the VM
+Note: You’ll need to run VirtualBox as an administrator anytime you want to run the VM so it can access the drive
+VBoxManage modifyvm SpinRite_6.1 --bioslogodisplaytime 10000
+
+elevated powershell
+
+diskpart
+
+Microsoft DiskPart version 10.0.22621.1
+
+Copyright (C) Microsoft Corporation.
+On computer: DESKTOP-FEQK2N9
+
+DISKPART> list drive
+
+Microsoft DiskPart version 10.0.22621.1
+
+DISK        - Display a list of disks. For example, LIST DISK.
+PARTITION   - Display a list of partitions on the selected disk.
+              For example, LIST PARTITION.
+VOLUME      - Display a list of volumes. For example, LIST VOLUME.
+VDISK       - Displays a list of virtual disks.
+
+DISKPART> list disk
+
+  Disk ###  Status         Size     Free     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  Disk 0    Online          238 GB  2048 KB        *
+  Disk 1    Online           57 GB      0 B
+  Disk 2    Online           15 GB      0 B
+  Disk 3    Online          954 MB      0 B
+
+DISKPART> exit
+
+Leaving DiskPart...
+
+cd C:\Users\adminwin\VirtualBox VMs\SpinRite_6.1
+VBoxManage internalcommands createrawvmdk -filename "FILENAME" -rawdisk "\\.\PhysicalDrive#"
+'C:\Program Files\Oracle\VirtualBox\VBoxManage.exe' internalcommands createrawvmdk -filename "My-Internal-HD.vmdk" -rawdisk "\\.\PhysicalDrive0"
+
+C:\Users\adminwin\VirtualBox VMs\SpinRite_6.1>"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands createrawvmdk -filename "My-Internal-HD.vmdk" -rawdisk "\\.\PhysicalDrive0"
+
+The 'createrawvdk' subcommand is deprecated.  The equivalent functionality is
+available using the 'VBoxManage createmedium' command and should be used
+instead.  See 'VBoxManage help createmedium' for details.
+
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+Medium created. UUID: 867a1655-7e33-4320-bbc2-2034fedcbc33
+
+https://www.ratatouille90.com/2013/11/using-a-raw-disk-as-a-virtualbox-drive/
+Start up the VM
+Note: You’ll need to run VirtualBox as an administrator anytime you want to run the VM so it can access the drive
+VBoxManage modifyvm SpinRite_6.1 --bioslogodisplaytime 10000
+
+elevated powershell
+
+diskpart
+
+Microsoft DiskPart version 10.0.22621.1
+
+Copyright (C) Microsoft Corporation.
+On computer: DESKTOP-FEQK2N9
+
+DISKPART> list drive
+
+Microsoft DiskPart version 10.0.22621.1
+
+DISK        - Display a list of disks. For example, LIST DISK.
+PARTITION   - Display a list of partitions on the selected disk.
+              For example, LIST PARTITION.
+VOLUME      - Display a list of volumes. For example, LIST VOLUME.
+VDISK       - Displays a list of virtual disks.
+
+DISKPART> list disk
+
+  Disk ###  Status         Size     Free     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  Disk 0    Online          238 GB  2048 KB        *
+  Disk 1    Online           57 GB      0 B
+  Disk 2    Online           15 GB      0 B
+  Disk 3    Online          954 MB      0 B
+
+DISKPART> exit
+
+Leaving DiskPart...
+
+cd C:\Users\adminwin\VirtualBox VMs\SpinRite_6.1
+VBoxManage internalcommands createrawvmdk -filename "FILENAME" -rawdisk "\\.\PhysicalDrive#"
+'C:\Program Files\Oracle\VirtualBox\VBoxManage.exe' internalcommands createrawvmdk -filename "My-Internal-HD.vmdk" -rawdisk "\\.\PhysicalDrive0"
+
+C:\Users\adminwin\VirtualBox VMs\SpinRite_6.1>"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands createrawvmdk -filename "My-Internal-HD.vmdk" -rawdisk "\\.\PhysicalDrive0"
+
+The 'createrawvdk' subcommand is deprecated.  The equivalent functionality is
+available using the 'VBoxManage createmedium' command and should be used
+instead.  See 'VBoxManage help createmedium' for details.
+
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+Medium created. UUID: 867a1655-7e33-4320-bbc2-2034fedcbc33
+
+https://www.ratatouille90.com/2013/11/using-a-raw-disk-as-a-virtualbox-drive/
+Start up the VM
+Note: You’ll need to run VirtualBox as an administrator anytime you want to run the VM so it can access the drive
+VBoxManage modifyvm SpinRite_6.1 --bioslogodisplaytime 10000
+
